@@ -1,0 +1,200 @@
+/* Global App Styles */
+#root {
+width: 100%;
+min-height: 100vh;
+margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background-color: #0a0a0a;
+color: #ffffff;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Content */
+.app-container {
+min-height: 80vh;
+padding: 100px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: radial-gradient(
+circle at center,
+#2a080a 0%,
+#0a0a0a 65%
+);
+}
+
+/* Main Heading */
+.app-container h1 {
+margin: 0 0 20px;
+color: #e50914;
+font-size: clamp(32px, 6vw, 64px);
+font-weight: 900;
+letter-spacing: 2px;
+line-height: 1.2;
+}
+
+/* Description */
+.app-container p {
+margin: 0;
+color: #cccccc;
+font-size: clamp(16px, 2vw, 22px);
+line-height: 1.7;
+}
+
+/* Text Selection */
+::selection {
+background-color: #e50914;
+color: #ffffff;
+}
+
+/* Shared call-to-action styling */
+.navbar-button,
+.home-btn,
+.membership-btn,
+.back-button,
+.join-program-button,
+.join-submit,
+.back-membership {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 0;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.navbar-button::after,
+.home-btn::after,
+.membership-btn::after,
+.back-button::after,
+.join-program-button::after,
+.join-submit::after,
+.back-membership::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  pointer-events: none;
+  transition: width 0.25s ease, height 0.25s ease;
+}
+
+.navbar-button:hover,
+.home-btn:hover,
+.membership-btn:hover,
+.back-button:hover,
+.join-program-button:hover,
+.join-submit:hover,
+.back-membership:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(229, 9, 20, 0.28);
+}
+
+.navbar-button:hover::after,
+.home-btn:hover::after,
+.membership-btn:hover::after,
+.back-button:hover::after,
+.join-program-button:hover::after,
+.join-submit:hover::after,
+.back-membership:hover::after {
+  width: 18px;
+  height: 18px;
+}
+
+.membership-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.back-membership {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: 1px solid #e50914;
+  background: #e50914;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navbar-button:focus-visible,
+.home-btn:focus-visible,
+.membership-btn:focus-visible,
+.back-button:focus-visible,
+.join-program-button:focus-visible,
+.join-submit:focus-visible,
+.back-membership:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+.app-container {
+min-height: 70vh;
+padding: 70px 20px;
+}
+
+.app-container h1 {
+letter-spacing: 1px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-button,
+  .home-btn,
+  .membership-btn,
+  .back-button,
+  .join-program-button,
+  .join-submit,
+  .back-membership,
+  .navbar-button::after,
+  .home-btn::after,
+  .membership-btn::after,
+  .back-button::after,
+  .join-program-button::after,
+  .join-submit::after,
+  .back-membership::after {
+    transition: none;
+  }
+
+  .navbar-button:hover,
+  .home-btn:hover,
+  .membership-btn:hover,
+  .back-button:hover,
+  .join-program-button:hover,
+  .join-submit:hover,
+  .back-membership:hover {
+    transform: none;
+  }
+}

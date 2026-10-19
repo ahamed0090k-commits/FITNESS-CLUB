@@ -1,0 +1,156 @@
+/* PROGRAM DETAILS PAGE */
+.program-details {
+  min-height: 100vh;
+  padding: 40px 8% 80px;
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+/* BACK BUTTON */
+.back-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 12px 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #e50914;
+  border-color: #e50914;
+}
+
+/* HERO SECTION */
+.details-hero {
+  padding: 60px;
+  background: linear-gradient(135deg, #1c1c1c, #101010);
+  border-left: 5px solid #e50914;
+}
+
+.details-label {
+  color: #e50914;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.details-hero h1 {
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.details-hero > p:not(.details-label) {
+  max-width: 700px;
+  color: #bbbbbb;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* DURATION AND LEVEL */
+.details-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 35px 0;
+}
+
+.details-info span {
+  display: block;
+  color: #e50914;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.details-info h3 {
+  font-size: 18px;
+}
+
+/* JOIN BUTTON */
+.join-program-button {
+  padding: 16px 28px;
+  background: #e50914;
+  border: 2px solid #e50914;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-program-button:hover {
+  background: transparent;
+  color: #e50914;
+  transform: translateY(-3px);
+}
+
+/* BENEFITS AND EXERCISES */
+.details-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.details-box {
+  padding: 30px;
+  background: #171717;
+  border: 1px solid #292929;
+  transition: border-color 0.3s ease;
+}
+
+.details-box:hover {
+  border-color: #e50914;
+}
+
+.details-box h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.details-box p {
+  color: #cccccc;
+  padding: 14px 0;
+  border-bottom: 1px solid #292929;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .program-details {
+    padding: 25px 5% 50px;
+  }
+
+  .details-hero {
+    padding: 30px 22px;
+  }
+
+  .details-info {
+    gap: 25px;
+  }
+
+  .details-content {
+    grid-template-columns: 1fr;
+  }
+
+  .details-box {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .details-hero h1 {
+    font-size: 29px;
+  }
+
+  .join-program-button {
+    width: 100%;
+    padding: 15px;
+  }
+}

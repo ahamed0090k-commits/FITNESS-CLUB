@@ -1,0 +1,126 @@
+/* MEMBERSHIP SECTION */
+.membership {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: #080808;
+  color: #ffffff;
+}
+
+/* HEADING */
+.membership-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.membership-heading > p {
+  color: #ff2b2b;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.membership-heading h1 {
+  font-size: clamp(32px, 5vw, 55px);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.membership-heading span {
+  color: #aaaaaa;
+  font-size: 16px;
+}
+
+/* MEMBERSHIP CARDS */
+.membership-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.membership-card {
+  background: #121212;
+  border: 1px solid #292929;
+  padding: 40px 28px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.membership-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff2b2b;
+}
+
+.membership-card h2 {
+  font-size: 23px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.membership-card h3 {
+  font-size: 42px;
+  color: #ff2b2b;
+  margin-bottom: 30px;
+}
+
+.membership-card h3 span {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px;
+}
+
+.membership-card li {
+  color: #cccccc;
+  padding: 12px 0;
+  border-bottom: 1px solid #252525;
+  font-size: 14px;
+}
+
+/* JOIN NOW BUTTON */
+.membership-btn {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ff2b2b;
+  background: #ff2b2b;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.membership-btn:hover {
+  background: transparent;
+  color: #ff2b2b;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .membership-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .membership {
+    padding: 70px 6%;
+  }
+
+  .membership-container {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    padding: 35px 25px;
+  }
+}

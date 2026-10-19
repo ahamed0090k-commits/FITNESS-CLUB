@@ -1,0 +1,392 @@
+/* MAIN ABOUT SECTION */
+
+.about {
+  width: 100%;
+  padding: 0;
+  background: #0b0b0b;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.about > div {
+  padding: 100px 8%;
+}
+
+.about-container,
+.about-philosophy,
+.about-purpose-grid,
+.about-section-heading,
+.about-features,
+.about-commitment {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SHARED RED LABEL */
+
+.about-tagline {
+  color: #e50914;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* FIRST SECTION */
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.about-image {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+  transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.06);
+}
+
+.about-image-label {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.about-red-text {
+  color: #e50914;
+}
+
+/* MAIN CONTENT */
+
+.about-content h2,
+.about-philosophy-content h2,
+.about-commitment h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.about-content h2 span,
+.about-philosophy-content h2 span,
+.about-commitment h2 span,
+.about-section-heading h2 span {
+  color: #e50914;
+}
+
+.about-description {
+  color: #b8b8b8;
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+/* SHARED SECTION HEADING */
+
+.about-section-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.about-section-heading h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.about-section-heading > p:last-child {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* MISSION AND VISION */
+
+.about-purpose {
+  background: #111111;
+}
+
+.about-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.about-purpose-card {
+  padding: 40px;
+  background: #090909;
+  border: 1px solid #292929;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-purpose-card:hover {
+  border-color: #e50914;
+  transform: translateY(-5px);
+}
+
+.about-purpose-number {
+  display: inline-block;
+  color: #e50914;
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.about-purpose-card h3 {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.about-purpose-card p {
+  color: #aaaaaa;
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+/* FITNESS PHILOSOPHY */
+
+.about-philosophy {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-philosophy-content .about-description {
+  margin-bottom: 20px;
+}
+
+.about-quote-card {
+  padding: 45px;
+  background: #131313;
+  border: 1px solid #292929;
+  border-bottom: 5px solid #e50914;
+}
+
+.about-quote-mark {
+  display: block;
+  color: #e50914;
+  font-family: Georgia, serif;
+  font-size: 85px;
+  line-height: 0.9;
+}
+
+.about-quote-card h3 {
+  font-size: clamp(25px, 3vw, 38px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin: 25px 0;
+}
+
+.about-quote-line {
+  width: 65px;
+  height: 4px;
+  background: #e50914;
+  margin-bottom: 20px;
+}
+
+.about-quote-card p {
+  color: #aaaaaa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* WHY CHOOSE US */
+
+.about-benefits {
+  background: #111111;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: #090909;
+  border: 1px solid #292929;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateY(-5px);
+  border-color: #e50914;
+}
+
+.about-number {
+  flex-shrink: 0;
+  color: #e50914;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.about-feature h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-feature p {
+  color: #999999;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* COMMITMENT SECTION */
+
+.about-commitment {
+  text-align: center;
+}
+
+.about-commitment h2 {
+  font-size: clamp(38px, 5vw, 60px);
+  margin-bottom: 30px;
+}
+
+.about-commitment > .about-description {
+  max-width: 850px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.about-cta-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 17px 28px;
+  background: #e50914;
+  border: 2px solid #e50914;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.about-cta-button:hover {
+  background: transparent;
+  color: #e50914;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .about > div {
+    padding: 75px 6%;
+  }
+
+  .about-container,
+  .about-philosophy {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-purpose-grid {
+    gap: 20px;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 350px;
+    height: 400px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .about > div {
+    padding: 60px 5%;
+  }
+
+  .about-content h2,
+  .about-philosophy-content h2 {
+    font-size: 33px;
+  }
+
+  .about-image,
+  .about-image img {
+    min-height: 280px;
+    height: 300px;
+  }
+
+  .about-image-label {
+    font-size: 20px;
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .about-purpose-grid,
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-purpose-card {
+    padding: 28px 22px;
+  }
+
+  .about-feature {
+    gap: 14px;
+    padding: 23px 18px;
+  }
+
+  .about-number {
+    font-size: 23px;
+  }
+
+  .about-quote-card {
+    padding: 30px 23px;
+  }
+
+  .about-quote-card h3 {
+    font-size: 28px;
+  }
+
+  .about-section-heading {
+    margin-bottom: 35px;
+  }
+}
