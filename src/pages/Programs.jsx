@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Programs.css";
 
 function Programs() {
@@ -86,9 +87,9 @@ function Programs() {
 
               <p>{program.description}</p>
 
-              <a href={`/programs/${program.id}`} className="program-link">
+              <Link to={`/programs/${program.id}`} className="program-link">
                 EXPLORE PROGRAM <span>→</span>
-              </a>
+              </Link>
 
             </div>
           </article>

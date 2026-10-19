@@ -17,6 +17,14 @@ const membershipPlans = {
   },
 };
 
+function getLocalDateValue() {
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+
+  return `${today.getFullYear()}-${month}-${day}`;
+}
+
 function JoinNow() {
   const { plan } = useParams();
 
@@ -191,7 +199,7 @@ function JoinNow() {
               type="date"
               value={formData.startDate}
               onChange={handleChange}
-              min={new Date().toLocaleDateString("en-CA")}
+              min={getLocalDateValue()}
               required
             />
           </div>

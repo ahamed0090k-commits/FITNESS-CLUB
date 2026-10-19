@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Link, Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -46,7 +46,15 @@ function App() {
         <Route path="/membership" element={<Membership />} />
 
         <Route path="/join-now/:plan" element={<JoinNow />} />
-        
+        <Route
+          path="*"
+          element={
+            <main className="app-container">
+              <h1>Page not found</h1>
+              <Link to="/">Back to home</Link>
+            </main>
+          }
+        />
       </Routes>
     </>
   );

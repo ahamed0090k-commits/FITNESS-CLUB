@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./About.css";
 
 function About() {
@@ -47,7 +48,7 @@ function About() {
       <div className="about-container">
         <div className="about-image">
           <img
-            src="/images/gym2.png"
+            src={`${import.meta.env.BASE_URL}images/gym2.png`}
             alt="AADUKALAM Fitness Club training area"
           />
 
@@ -300,9 +301,9 @@ function About() {
           future.
         </p>
 
-        <a href="/membership" className="about-cta-button">
+        <Link to="/membership" className="about-cta-button">
           START YOUR FITNESS JOURNEY →
-        </a>
+        </Link>
       </div>
     </section>
   );

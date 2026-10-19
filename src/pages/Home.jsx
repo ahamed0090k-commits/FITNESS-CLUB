@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -25,13 +26,13 @@ function Home() {
             journey with AADUKALAM FITNESS CLUB.
           </p>
           <div className="home-buttons">
-            <a href="/membership" className="home-btn primary-btn">
+            <Link to="/membership" className="home-btn primary-btn">
               START YOUR FITNESS JOURNEY
-            </a>
+            </Link>
 
-            <a href="#programs" className="home-btn secondary-btn">
+            <Link to="/#programs" className="home-btn secondary-btn">
               EXPLORE PROGRAMS
-            </a>
+            </Link>
           </div>
           <div className="home-stats">
             {stats.map((stat) => (
@@ -43,7 +44,10 @@ function Home() {
           </div>
         </div>
         <div className="home-image">
-          <img src="/images/gym.png" alt="AADUKALAM Fitness Club Gym" />
+          <img
+            src={`${import.meta.env.BASE_URL}images/gym.png`}
+            alt="AADUKALAM Fitness Club Gym"
+          />
 
           <div className="image-label">
             <span className="red-dot"></span>
